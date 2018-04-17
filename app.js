@@ -12,6 +12,6 @@ const bot = new builder.UniversalBot(connector);
 require('./routes/bot')(bot);
 require('./routes/web')(server, connector);
 
-server.listen(3978, () => {
+server.listen(process.env.port || process.env.PORT || 3978, () => {
 	console.log('%s listening to %s', server.name, server.url); 
 });
