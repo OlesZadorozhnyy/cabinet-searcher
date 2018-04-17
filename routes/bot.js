@@ -5,4 +5,5 @@ const rootDialog = require('../dialogs/rootDialog');
 
 bot.dialog('/', rootDialog);
 
+
 module.exports = bot;
