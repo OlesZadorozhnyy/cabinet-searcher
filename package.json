@@ -1,0 +1,25 @@
+{
+  "name": "cabinet-searcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlesZadorozhnyy/cabinet-searcher.git"
+  },
+  "author": "Oles Zadorozhnyy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlesZadorozhnyy/cabinet-searcher/issues"
+  },
+  "homepage": "https://github.com/OlesZadorozhnyy/cabinet-searcher#readme",
+  "dependencies": {
+    "botbuilder": "^3.14.1",
+    "dotenv": "^5.0.1",
+    "restify": "^7.1.1"
+  }
+}
