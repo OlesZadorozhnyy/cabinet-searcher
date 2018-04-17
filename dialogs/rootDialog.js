@@ -1,5 +1,7 @@
 'use strict';
 
 module.exports = function(session) {
-	session.send(session.message.text);
+	const text = session.message.text;
+
+	session.send(text);
 };

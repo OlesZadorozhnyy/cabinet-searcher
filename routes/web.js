@@ -1,8 +1,7 @@
 'use strict';
 
-const server = require('../server');
-const connector = require('../connector');
+module.exports = function(server, connector) {
+	server.post('/api/messages', connector.listen());
 
-server.post('/api/messages', connector.listen());
-
-module.exports = server;
+	return server;
+};

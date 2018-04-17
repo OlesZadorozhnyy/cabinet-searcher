@@ -2,15 +2,16 @@
 
 require('dotenv').config();
 
-const server = require('./server');
+const restify = require('restify');
+const builder = require('botbuilder');
 const connector = require('./connector');
-const bot = require('./bot');
 
-require('./routes/bot');
-require('./routes/web');
+const server = restify.createServer();
+const bot = new builder.UniversalBot(connector);
 
-const port = 3978;
+require('./routes/bot')(bot);
+require('./routes/web')(server, connector);
 
-server.listen(port, () => {
+server.listen(3978, () => {
 	console.log('%s listening to %s', server.name, server.url); 
 });
