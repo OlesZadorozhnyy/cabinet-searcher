@@ -1,12 +1,13 @@
 'use strict';
 
-module.exports = function(session) {
+module.exports = function(session, data) {
 	// TODO:
-	// Parse cabinet number
 	// Send api request to get info about cabinet
 	// Send response
 
-	const cabinetNumber = session.message.text;
+	const entity = data.intent.entities[0];
+
+	const cabinetNumber = entity.resolution.value;
 
 	session.send('Cabinet number: ' + cabinetNumber);
 	session.endDialog();
