@@ -7,5 +7,5 @@ module.exports = function(session) {
 	];
 
 	session.send(answers);
-	session.end()
+	session.endDialog();
 };
