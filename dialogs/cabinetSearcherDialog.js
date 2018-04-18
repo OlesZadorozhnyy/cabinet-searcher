@@ -5,9 +5,11 @@ module.exports = function(session, data) {
 	// Send api request to get info about cabinet
 	// Send response
 
-	const entity = data.intent.entities[0];
+	const entities = data.intent.entities;
 
-	const cabinetNumber = entity.resolution.value;
+	const cabinetNumbers = entities.map((entity) => {
+		return entity.resolution.value;
+	});
 
 	session.send('Cabinet number: ' + cabinetNumber);
 	session.endDialog();
