@@ -6,7 +6,7 @@ const cabinetSearcherDialog = require('../dialogs/cabinetSearcherDialog');
 const scheduleDialog = require('../dialogs/scheduleDialog');
 
 module.exports = function(bot) {
-	bot.dialog('StartDialog', startDialog).triggerAction({ matches: /^/start$/i });
+	bot.dialog('StartDialog', startDialog).triggerAction({ matches: /^\/start$/i });
 	bot.dialog('GreetingDialog', greetingDialog).triggerAction({ matches: 'Greeting' });
 	bot.dialog('CabinetSearcherDialog', cabinetSearcherDialog).triggerAction({ matches: 'CabinetSearcher' });
 	bot.dialog('ScheduleDialog', scheduleDialog).triggerAction({ matches: 'Schedule' });
