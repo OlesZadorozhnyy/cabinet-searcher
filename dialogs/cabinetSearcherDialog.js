@@ -11,6 +11,6 @@ module.exports = function(session, data) {
 		return entity.resolution.value;
 	});
 
-	session.send('Cabinet number: ' + cabinetNumber);
+	session.send('Cabinet numbers: ' + cabinetNumbers);
 	session.endDialog();
 };
