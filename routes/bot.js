@@ -17,7 +17,7 @@ module.exports = function(bot) {
 	bot.dialog('OkDialog', okDialog).triggerAction({ matches: /^ок|добре|супер$/i });
 	bot.dialog('WhyDialog', whyDialog).triggerAction({ matches: /^чому/i });
 	bot.dialog('HelpDialog', helpDialog).triggerAction({ matches: /^\/help$/i });
-	bot.dialog('ThanksDialog', thanksDialog).triggerAction({ matches: /^дяк|дякую|спасибі/i })ж
+	bot.dialog('ThanksDialog', thanksDialog).triggerAction({ matches: /^дяк|дякую|спасибі/i });
 
 	return bot;
 };
