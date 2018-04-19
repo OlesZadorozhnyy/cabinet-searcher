@@ -10,7 +10,9 @@ module.exports = {
 			const cabinets = require('./data.json').cabinets;
 
 			// TODO: PARSE FROM DB
-			return cabinets.filter((cabinet) => numbers.indexOf(cabinet.number));
+			const filteredCabinets = cabinets.filter((cabinet) => numbers.indexOf(cabinet.number));
+
+			return resolve(filteredCabinets);
 		});
 	}
 };
