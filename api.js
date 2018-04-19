@@ -12,7 +12,7 @@ module.exports = {
 			// TODO: PARSE FROM DB
 			const filteredCabinets = cabinets.filter((cabinet) => numbers.indexOf(cabinet.number));
 
-			return resolve(filteredCabinets);
+			return resolve({ cabinets: filteredCabinets });
 		});
 	}
 };
