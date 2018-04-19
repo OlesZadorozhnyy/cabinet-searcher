@@ -10,7 +10,7 @@ module.exports = {
 			const cabinets = require('./data.json').cabinets;
 
 			// TODO: PARSE FROM DB
-			const filteredCabinets = cabinets.filter((cabinet) => numbers.indexOf(cabinet.number));
+			const filteredCabinets = cabinets.filter((cabinet) => numbers.indexOf(cabinet.number) > -1);
 
 			return resolve({ cabinets: filteredCabinets });
 		});

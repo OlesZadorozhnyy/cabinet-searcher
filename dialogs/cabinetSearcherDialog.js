@@ -26,7 +26,7 @@ module.exports = function(session, data) {
 			let message = '';
 
 			cabinets.map((cabinet) => {
-				if (message != '') message += "\n";
+				if (message != '') message += "\n\n";
 
 				const departmentWord = departments[cabinet.department_id].local_name;
 
