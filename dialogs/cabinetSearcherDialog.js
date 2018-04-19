@@ -23,18 +23,15 @@ module.exports = function(session, data) {
 
 			session.send(answers);
 		} else {
-			let message = '';
-
 			cabinets.map((cabinet) => {
-				if (message != '') message += "\n\n";
-
 				const departmentWord = departments[cabinet.department_id].local_name;
 
+				let message = '';
 				message += `Аудиторія № ${cabinet.number} знаходиться на ${departmentWord} на ${cabinet.floor} поверсі. `;
 				message += `Назва аудиторії: ${cabinet.target}. Деталі: ${cabinet.details}.`;
-			});
 
-			session.send(message);
+				session.send(message);
+			});
 		}
 
 		session.endDialog();
