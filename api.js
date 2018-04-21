@@ -1,18 +1,15 @@
 'use strict';
 
-const request = require('request');
-
-const url = '';
+const cabinetsModel = require('./models/cabinetsModel');
 
 module.exports = {
 	getCabinetsByNumbers(numbers) {
 		return new Promise((resolve, reject) => {
-			const cabinets = require('./data.json').cabinets;
+			cabinetsModel.getByNumbers(numbers, (err, cabinets) => {
+				if (err) return reject(err);
 
-			// TODO: PARSE FROM DB
-			const filteredCabinets = cabinets.filter((cabinet) => numbers.indexOf(cabinet.number) > -1);
-
-			return resolve({ cabinets: filteredCabinets });
+				return resolve({ cabinets: cabinets });
+			});
 		});
 	}
 };

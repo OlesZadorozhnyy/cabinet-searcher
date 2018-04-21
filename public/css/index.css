@@ -1,0 +1,4 @@
+body { padding: 10px; }
+
+table { margin-top: 20px; }
+table thead tr th, table tbody tr td { text-align: center; }
