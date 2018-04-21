@@ -10,9 +10,7 @@ module.exports = function(session, data) {
 		return entity.resolution.value;
 	});
 
-	api.getCabinetsByNumbers(cabinetNumbers).then((response) => {
-		const cabinets = response.cabinets;
-
+	api.getCabinetsByNumbers(cabinetNumbers).then((cabinets) => {
 		if (!cabinets.length) {
 			const answers = [
 				'Аудиторію не знайдено.',
@@ -36,6 +34,8 @@ module.exports = function(session, data) {
 
 		session.endDialog();
 	}).catch((error) => {
+		console.error(error);
+
 		session.send('Ой, щось пішло не так:(');
 		session.endDialog();
 	});

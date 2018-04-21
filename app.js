@@ -15,6 +15,7 @@ const rootDialog = require('./dialogs/rootDialog');
 const bot = new builder.UniversalBot(connector, rootDialog);
 require('./recognizer')(bot);
 
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride(methodRewriter));
 app.use('/', router);
