@@ -1,6 +1,7 @@
 'use strict';
 
 const rootController = require('../controllers/rootController');
+const chatController = require('../controllers/chatController');
 
 const createController = require('../controllers/createController');
 const updateController = require('../controllers/updateController');
@@ -10,6 +11,7 @@ const migrateController = require('../controllers/migrateController');
 
 module.exports = function(router, connector) {
 	router.get('/', rootController);
+	router.get('/chat', chatController);
 
 	router.post('/create', createController);
 	router.put('/:number', updateController);
